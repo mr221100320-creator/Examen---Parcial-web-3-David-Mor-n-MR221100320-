@@ -11,7 +11,7 @@
 
     <header>
         <div class="logo-title-group">
-            <img src="assets/logo.jpg" alt="Logo del Sitio" class="site-logo">
+            <img src="./assets/logo.jpg" alt="Logo del Sitio" class="site-logo">
             <h1>Conceptos Clave de Tecnología Educativa</h1>
         </div>
         
@@ -23,7 +23,7 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-    </header>
+        </header>
 
     <div class="info-adicional">
         <p>Hecho por: David Alexis Morán Rosales</p>
@@ -48,32 +48,49 @@
         </section>
 
         <section id="gamificacion">
-            <h2>Gamificación: Convirtiendo el Aprendizaje en un Juego (Tres en Raya)</h2>
-            <p>Para demostrar la aplicación de la **Gamificación** en el aprendizaje, hemos implementado una versión simple del clásico juego "Tres en Raya" (Gato/X y O). Este juego usa la **motivación por el logro** y la **competencia** para mantener el compromiso.</p>
+    <h2>Gamificación: Convirtiendo el Aprendizaje en un Juego</h2>
+    
+    <article class="componente-interactivo">
+        <h3>1. Tres en Raya (Lógica de Decisión)</h3>
+        <p>Para demostrar la aplicación de la **Gamificación** en el aprendizaje, hemos implementado una versión simple del clásico juego "Tres en Raya" (Gato/X y O). Este juego usa la **motivación por el logro** y la **competencia** para mantener el compromiso.</p>
+        
+        <div class="juego-container">
+            <div id="status-message">Turno del Jugador X</div> 
             
-            <article class="componente-interactivo">
-                <br>
-                <h3>¡A Jugar! Demuestra tu Lógica</h3>
-                
-                <div class="juego-container">
-                    <div id="status-message">Turno del Jugador X</div> 
-                    
-                    <div class="board" id="board">
-                        <div class="cell" data-index="0"></div>
-                        <div class="cell" data-index="1"></div>
-                        <div class="cell" data-index="2"></div>
-                        <div class="cell" data-index="3"></div>
-                        <div class="cell" data-index="4"></div>
-                        <div class="cell" data-index="5"></div>
-                        <div class="cell" data-index="6"></div>
-                        <div class="cell" data-index="7"></div>
-                        <div class="cell" data-index="8"></div>
-                    </div>
-                    
-                    <button id="restart-button">Reiniciar Juego</button>
-                </div>
-            </article>
-        </section>
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            
+            <button id="restart-button">Reiniciar Juego</button>
+            <br>
+        </div>
+    </article>
+    
+    <hr> <article class="componente-interactivo">
+        <br>
+        <h3>2. Juego de Disparos Básico (Habilidad y Reflejos)</h3>
+        <p>Este juego utiliza el **Canvas API** de HTML5 para simular movimiento y la interacción de múltiples objetos. Demuestra cómo la **reacción rápida** y la **puntuación instantánea** pueden reforzar la concentración, simulando un entorno de práctica de reflejos y toma de decisiones.</p>
+        
+        <div class="canvas-game-container">
+            <canvas id="shooterCanvas" width="500" height="400"></canvas>
+            <div class="game-controls">
+                <p>Puntuación: <span id="score">0</span></p>
+                <button id="startGameButton">Comenzar Juego</button>
+                <p class="instrucciones">Usa las flechas izquierda/derecha para moverte y la letra "S" para disparar.</p>
+            </div>
+        </div>
+    </article>
+</section>
+
+
 
         <section id="bases-datos">
             <h2>Infografía: Conceptos Esenciales de Bases de Datos</h2>
@@ -118,7 +135,7 @@
         </nav>
     </footer>
 
-    <script src="tictactoe.js"></script> 
-
+    <script src="./tictactoe.js"></script> 
+    <script src="./shooter.js"></script> 
 </body>
 </html>
