@@ -1,1 +1,120 @@
-KMKL
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamificación y Bases de Datos - Trabajo Final</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="logo-title-group">
+            <img src="assets/logo.jpg" alt="Logo del Sitio" class="site-logo">
+            <h1>Conceptos Clave de Tecnología Educativa</h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#gamificacion">Gamificación</a></li>
+                <li><a href="#bases-datos">Bases de Datos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="info-adicional">
+        <p>Hecho por: **David Alexis Morán Rosales**</p>
+        <p>Carrera: **Licenciatura en Informática**</p>
+    </div>
+
+    <main>
+
+        <section id="inicio">
+            <article>
+                <h2>Bienvenido: Explorando la Tecnología del Aprendizaje</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <figure>
+                    <video controls poster="assets/portada-video.jpg" width="600">
+                        <source src="assets/bienvenido.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                    <figcaption>Video introductorio sobre la aplicación de la tecnología en la educación.</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <section id="gamificacion">
+            <h2>Gamificación: Convirtiendo el Aprendizaje en un Juego (Tres en Raya)</h2>
+            <p>Para demostrar la aplicación de la **Gamificación** en el aprendizaje, hemos implementado una versión simple del clásico juego "Tres en Raya" (Gato/X y O). Este juego usa la **motivación por el logro** y la **competencia** para mantener el compromiso.</p>
+            
+            <article class="componente-interactivo">
+                <h3>¡A Jugar! Demuestra tu Lógica</h3>
+                
+                <div class="juego-container">
+                    <div id="status-message">Turno del Jugador X</div> 
+                    
+                    <div class="board" id="board">
+                        <div class="cell" data-index="0"></div>
+                        <div class="cell" data-index="1"></div>
+                        <div class="cell" data-index="2"></div>
+                        <div class="cell" data-index="3"></div>
+                        <div class="cell" data-index="4"></div>
+                        <div class="cell" data-index="5"></div>
+                        <div class="cell" data-index="6"></div>
+                        <div class="cell" data-index="7"></div>
+                        <div class="cell" data-index="8"></div>
+                    </div>
+                    
+                    <button id="restart-button">Reiniciar Juego</button>
+                </div>
+            </article>
+        </section>
+
+        <section id="bases-datos">
+            <h2>Infografía: Conceptos Esenciales de Bases de Datos</h2>
+            <p>Sed non dui et leo euismod gravida ut a nisl. Fusce sed orci in nulla scelerisque tempor. Praesent quis augue ac est hendrerit interdum eu sit amet nisl. Vivamus at sem consectetur, auctor mauris nec, congue justo.</p>
+            
+            <article class="infografia-container">
+                <h3>Visualización del Documento</h3>
+                <iframe src="assets/flyer.pdf" width="100%" height="600px" style="border: none;" title="Infografía de Bases de Datos">
+                    <p>Tu navegador no soporta iframes. <a href="assets/flyer.pdf">Descarga la infografía aquí.</a></p>
+                </iframe>
+                <p>Nunc a ante id massa fermentum luctus eu eget quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Aenean bibendum placerat metus, nec volutpat odio.</p>
+            </article>
+        </section>
+
+        <section id="contacto">
+            <h2>🤝 Contacto y Soporte</h2>
+            <article>
+                <p>Si tienes dudas sobre los temas de Gamificación o Bases de Datos, o requieres soporte técnico para los componentes interactivos, puedes contactarnos a través de los siguientes medios ficticios:</p>
+
+                <ul>
+                    <li>**Correo Electrónico Principal:** info@tech-educativa.com</li>
+                    <li>**Soporte Técnico:** soporte@data-gamification.edu</li>
+                    <li>**Teléfono Ficticio:** (503) 2255-8899</li>
+                    <li>**Dirección Ficticia:** Avenida de la Innovación, Edificio TEC, Oficina 404, San Salvador, El Salvador.</li>
+                </ul>
+
+                <p>Nuestro equipo de desarrollo está disponible de Lunes a Viernes, de 8:00 a.m. a 5:00 p.m. (Hora de Centroamérica).</p>
+            </article>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; <time datetime="2025">2025</time> Conceptos Clave de Tecnología Educativa. Todos los derechos reservados.</p>
+        <nav class="redes-sociales">
+            <a href="#">[Facebook Ficticio]</a> | 
+            <a href="#">[Twitter Ficticio]</a> | 
+            <a href="#">[LinkedIn Ficticio]</a>
+        </nav>
+    </footer>
+
+    <script src="tictactoe.js"></script> 
+
+</body>
+</html>
