@@ -1,9 +1,11 @@
 /* =================================== */
 /* 0. GOOGLE FONTS & REINICIO GLOBAL    */
 /* =================================== */
+/* Importa la fuente "Poppins" de Google Fonts para un aspecto moderno y legible */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
+    /* Paleta de Colores Coherente */
     --color-principal: #0077B6;      /* Azul Marino Oscuro */
     --color-secundario: #00B4D8;    /* Turquesa Vivo */
     --color-acento: #FFC107;        /* Amarillo para botones/hover */
@@ -19,7 +21,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif; /* Aplica la tipografía de Google Fonts */
     background-color: var(--color-fondo-claro);
     color: var(--color-texto);
     line-height: 1.6;
@@ -44,8 +46,8 @@ main {
     max-width: 1200px;
     margin: 20px auto;
     background-color: white;
-    box-shadow: var(--sombra-box); 
-    border-radius: 12px;
+    box-shadow: var(--sombra-box); /* Sombra */
+    border-radius: 12px; /* Bordes redondeados */
 }
 
 section {
@@ -61,11 +63,12 @@ section:last-child {
 /* =================================== */
 /* 2. HEADER y NAV (Flexbox)           */
 /* =================================== */
+
 header {
     background-color: var(--color-principal);
     color: white;
     padding: 2em 2em; /* Aumentado para darle espacio al logo más grande */
-    display: flex; 
+    display: flex; /* Layout con Flexbox */
     justify-content: space-between;
     align-items: center;
 }
@@ -95,13 +98,14 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; 
+    display: flex; /* Flexbox para el menú horizontal */
 }
 
 nav ul li {
     margin-left: 25px;
 }
 
+/* Estilos para el menú navegable */
 nav ul a {
     color: white;
     text-decoration: none;
@@ -111,14 +115,16 @@ nav ul a {
     transition: background-color 0.3s, transform 0.2s;
 }
 
+/* Efecto Hover */
 nav ul a:hover {
     background-color: var(--color-secundario);
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* Pequeño efecto de levantamiento */
 }
 
 /* =================================== */
 /* 3. FRANJA DE INFORMACIÓN ADICIONAL  */
 /* =================================== */
+
 .info-adicional {
     background-color: #e0e0e0;
     color: var(--color-texto);
@@ -137,6 +143,7 @@ nav ul a:hover {
 /* =================================== */
 /* 4. ESTILOS DE MEDIA (VIDEO/FIGURE)  */
 /* =================================== */
+
 figure {
     margin: 30px 0;
     text-align: center;
@@ -159,6 +166,7 @@ figcaption {
 /* =================================== */
 /* 5. JUEGO TRES EN RAYA (X y O)       */
 /* =================================== */
+
 .juego-container {
     display: flex;
     flex-direction: column;
@@ -174,7 +182,7 @@ figcaption {
 }
 
 .board {
-    display: grid;
+    display: grid; /* Layout con Grid para el tablero */
     grid-template-columns: repeat(3, 100px); 
     grid-template-rows: repeat(3, 100px);
     gap: 5px;
@@ -199,6 +207,7 @@ figcaption {
     background-color: var(--color-fondo-claro);
 }
 
+/* Colores de las fichas */
 .cell.x {
     color: #FF6B6B;
 }
@@ -207,6 +216,7 @@ figcaption {
     color: var(--color-secundario); 
 }
 
+/* Estilo al ganar */
 .cell.winning {
     background-color: #28A745; 
     color: white;
@@ -215,7 +225,7 @@ figcaption {
 #restart-button {
     padding: 12px 25px;
     font-size: 1.1em;
-    background-color: var(--color-acento);
+    background-color: var(--color-acento); 
     color: var(--color-texto);
     border: none;
     border-radius: 8px;
@@ -224,6 +234,7 @@ figcaption {
     transition: background-color 0.3s, transform 0.2s;
 }
 
+/* Efecto Hover */
 #restart-button:hover {
     background-color: #E0A800;
     transform: translateY(-2px);
@@ -254,7 +265,10 @@ footer a:hover {
 /* =================================== */
 /* 7. DISEÑO RESPONSIVE (MÓVILES)      */
 /* =================================== */
+
 @media (max-width: 480px) {
+    
+    /* Ajustes del Body y Main */
     body {
         font-size: 14px;
     }
@@ -268,31 +282,35 @@ footer a:hover {
     header {
         flex-direction: column; 
         text-align: center;
-        padding: 1em;
+        padding: 1em; /* Menos padding en móvil */
     }
     
     .logo-title-group {
-        flex-direction: column; 
-        margin-bottom: 10px;
+        flex-direction: column; /* Apila el logo y el título */
+        margin-bottom: 15px;
     }
 
+    /* Reducimos el logo en móvil */
     .site-logo {
+        width: 50px; 
+        height: 50px;
         margin-right: 0;
         margin-bottom: 10px;
     }
 
     header h1 {
-        font-size: 1.5em;
+        font-size: 1.2em; /* Título más pequeño */
     }
 
     /* Menú navegable */
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Coloca los enlaces uno debajo del otro */
         width: 100%;
+        gap: 5px; /* Pequeño espacio entre los ítems */
     }
 
     nav ul li {
-        margin: 5px 0;
+        margin: 0;
         width: 100%;
     }
 
@@ -308,19 +326,20 @@ footer a:hover {
         flex-direction: column; 
         align-items: center;
         padding: 10px 0;
+        font-size: 0.8em; /* Texto más pequeño */
     }
 
     .info-adicional p {
-        padding: 5px 0;
+        padding: 2px 0;
     }
 
     /* Ajuste del Juego Tres en Raya */
     .board {
-        grid-template-columns: repeat(3, 80px); 
-        grid-template-rows: repeat(3, 80px);
+        grid-template-columns: repeat(3, 70px); /* Celdas más pequeñas */
+        grid-template-rows: repeat(3, 70px);
     }
     
     .cell {
-        font-size: 2.5em;
+        font-size: 2.2em;
     }
 }
